@@ -4074,7 +4074,7 @@ async function triggerOcrConversion(imageBase64) {
   imagePreviewWrapper.classList.add('scanning');
   aiLoadingOverlay.classList.add('active');
   
-  if (savedKey) {
+  if (savedKey && !isSample) {
     // REAL OCR FLOW USING GEMINI API
     aiLoadingText.textContent = "Sending image to Gemini...";
     
